@@ -1,0 +1,12 @@
+<div class="div row">
+    @for (photo of photos; track photo.id) {
+    <div class="col-12 col-lg-2 mb-3">
+        <h4>{{photo.username}}</h4>
+        <img src="{{photo.url}}" alt="{{photo.username}}" class="img-thumbnail" />
+        <div class="mt-2">
+            <button class="btn btn-sm btn-success me-1" (click)="approvePhoto(photo.id)">Approve</button>
+            <button class="btn btn-sm btn-danger mt-lg-1 mt-xl-0" (click)="rejectPhoto(photo.id)">Reject</button>
+        </div>
+    </div>
+    }
+</div>

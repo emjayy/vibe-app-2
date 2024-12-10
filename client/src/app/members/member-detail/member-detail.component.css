@@ -1,0 +1,14 @@
+.img-wrapper {
+    display: flex;
+    margin: 25px;
+}
+
+.card-body {
+    padding: 0 20px;
+}
+
+.card-footer {
+    padding: 10px 15px;
+    background-color: inherit;
+    border-top: none;
+}

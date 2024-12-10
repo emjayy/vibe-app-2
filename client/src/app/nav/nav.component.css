@@ -1,0 +1,25 @@
+.dropdown-toggle,
+.dropdown-item {
+    cursor: pointer;
+}
+
+img {
+    max-height: 50px;
+    border: 2px solid white;
+    display: inline;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 0;
+        padding-bottom: 5px;
+    }
+}
