@@ -3,6 +3,8 @@
 ##
 ## Get latest from `dotnet new gitignore`
 
+docker-compose.yml
+
 appSettings.*
 
 # dotenv files
