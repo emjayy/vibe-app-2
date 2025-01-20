@@ -21,7 +21,14 @@ public class AccountController(UserManager<AppUser> userManager, ITokenService t
 
         var result = await userManager.CreateAsync(user, registerDto.Password);
 
-        if (!result.Succeeded) return BadRequest(result.Errors);
+        if (!result.Succeeded)
+        {
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(error.Code, error.Description);
+            }
+            return ValidationProblem();
+        }
 
         return new UserDto
         {
