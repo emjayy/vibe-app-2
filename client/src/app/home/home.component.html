@@ -1,21 +1,29 @@
 <div class="container mt-5">
-    <div style="text-align: center;">
-
-        @if (!registerMode) {
-        <h1>Find your match</h1>
-        <p class="lead">Sign up to find someone today!</p>
-        <div class="text-center">
-            <button (click)="registerToggle()" class="btn btn-primary btn-lg me-2">Register</button>
-        </div>
-        } @else {
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-4">
-                    <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
-                </div>
-            </div>
-        </div>
-        }
-        
+  <div style="text-align: center">
+    @if (!registerMode) {
+    <h1>Find your match</h1>
+    <p class="lead">Sign up to find someone today!</p>
+    <div class="text-center">
+      <button (click)="registerToggle()" class="btn btn-primary btn-lg me-2">
+        Register
+      </button>
     </div>
+    } @else {
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-4">
+          <app-register
+            (cancelRegister)="cancelRegisterMode($event)"
+          ></app-register>
+        </div>
+      </div>
+    </div>
+    }
+    <p class="mt-5">
+      Register a user and sign in to see it in action. Note: This is using the
+      free version of Azure Sql DB which auto-pauses when not in use so the
+      first request may timeout. If you get a Server Error, please navigate back
+      to home and try again.
+    </p>
+  </div>
 </div>
